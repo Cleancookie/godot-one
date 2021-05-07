@@ -53,3 +53,7 @@ func _on_ScoreTimer_timeout():
 
 func _on_HUD_start_game():
 	new_game()
+
+
+func _on_BgAnimator_timeout():
+	$Background.color.h = fmod( ($Background.color.h + (2*PI/1440)) , 2*PI )
